@@ -107,9 +107,9 @@ for w in all_word_list:
 
 
 ## TfidfVectorizer
-vectorizer = TfidfVectorizer(min_df=min_df, max_df=max_df, lowercase=False, norm='l2') #L2ノルムで正規化
+vectorizer = TfidfVectorizer(min_df=min_df, max_df=max_df, lowercase=False, norm='l2')
 X =vectorizer.fit_transform(corpus)
-feature_names = vectorizer.get_feature_names_out() # get_feature_names()の新バージョン
+feature_names = vectorizer.get_feature_names_out()
 feature_names_df = pd.DataFrame(feature_names, columns=['特徴量'])
 feature_names_df.to_csv("feature_names_df.csv", index=True, encoding="utf-8_sig")
 
